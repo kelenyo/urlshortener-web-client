@@ -3,7 +3,6 @@ import { ChakraProvider } from "@chakra-ui/react"
 import { Box, Text } from "@chakra-ui/react"
 import MainPage from "./MainPage";
 import './App.css';
-import CheckConnection from "./CheckConnection";
 
 function App() {
 

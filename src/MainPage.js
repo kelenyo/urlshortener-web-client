@@ -14,17 +14,13 @@ import {
 
 function MainPage() {
     const sendData = async (data) => {
-        const response = await axios.get(
-            'http://localhost:8080',
+        const response = await axios.post(
+            'http://localhost:8080/createshorturl',
+            { url: 'http://localhost:8080' },
             {
-                headers: {
-                    'Content-Type': 'text/plain;charset=UTF-8',
-                    "Accept": "application/json"
-                },
-                auth: {
-                    username: 'admin',
-                    password: 'demo'
-                }
+                    headers: {
+                        authorization: 'Basic ' + window.btoa("admin:demo"),
+                    },
             }
         )
         console.log(response.data)
