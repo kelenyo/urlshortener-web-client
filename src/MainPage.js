@@ -47,8 +47,15 @@ function MainPage() {
                 <Formik
                     initialValues={{url: "", code: ""}}
                     validationSchema={Yup.object().shape({
-                        url: Yup.string().url('Invalid URL').required('Required'),
-                        code: Yup.string().min(6, 'Must be at least 6 characters').max(6, 'Must be max 6 characters')
+                        url: Yup.string().trim().url('Invalid URL').required('Required'),
+                        code: Yup.string()
+                            .trim()
+                            .min(1, 'Must be at least 6 alphanumeric characters')
+                            .max(6, 'Must be max 6 alphanumeric characters')
+                            .matches(
+                                /^[a-zA-Z0-9]+$/,
+                                "May only contain alphanumeric characters."
+                            )
                     })}
                     onSubmit={async (values) => {
                         await sendData(values);
