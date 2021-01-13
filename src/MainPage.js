@@ -16,14 +16,16 @@ function MainPage() {
     const sendData = async (data) => {
         const response = await axios.post(
             'http://localhost:8080/createshorturl',
-            { url: 'http://localhost:8080' },
+            data,
             {
-                    headers: {
-                        authorization: 'Basic ' + window.btoa("admin:demo"),
-                    },
+                headers: {
+                    'Content-Type': 'application/json',
+                    "Accept": "*/*",
+                    "Access-Control-Allow-Origin": "*",
+                    "Authorization": 'Basic YWRtaW46ZGVtbw==',
+                }
             }
         )
-        console.log(response.data)
     }
 
     return (
@@ -37,7 +39,6 @@ function MainPage() {
                     })}
                     onSubmit={async (values) => {
                         await sendData(values);
-                        alert(JSON.stringify(values, null, 2));
                     }}
                 >
                     {(props) => (
