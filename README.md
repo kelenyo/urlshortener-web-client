@@ -3,6 +3,12 @@
 The client is used to communicate with the short url service Backend.
 The web client ist based on react-create-app.
 
+As user you would be able to enter a url and received from the service an shortened url of maximum 6 alphanumeric characters. The shortened url can be use to reach your website.
+Exemple: : https://www.seeburger.com/de/karriere/ => http://localhost/GUKA8w/
+
+If you want you can also enter your url with a code that will be use to form the new shortened url. In this case please just enter a code of maximum 6 alphanumeric characters.
+For example if you want to have the following result: : https://www.seeburger.com/de/karriere/stellenangebote/ => http://localhost/jobs/. Please just enter "jobs" as code.
+
 
 # Getting Started with Create React App
 
