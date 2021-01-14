@@ -1,6 +1,6 @@
-# URL-Shortener Web Client
+# Short URL Service Web Client
 
-The client is used to communicate withe the url-shortener Backend.
+The client is used to communicate with the short url service Backend.
 The web client ist based on react-create-app.
 
 
