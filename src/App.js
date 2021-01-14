@@ -9,7 +9,7 @@ function App() {
     return (
         <ChakraProvider>
             <Box bg="tomato" w="100%" p={4} color="white">
-                <Text fontSize="xl" fontWeight="semibold">URL Shortener Demo</Text>
+                <Text fontSize="xl" fontWeight="semibold">Short URL Service Demo</Text>
             </Box>
             <div className="App">
                 <header className="App-header">
