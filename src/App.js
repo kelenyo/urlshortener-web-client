@@ -11,10 +11,10 @@ function App() {
             <Box bg="tomato" w="100%" p={4} color="white">
                 <Text fontSize="xl" fontWeight="semibold">Short URL Service Demo</Text>
             </Box>
-            <div className="App">
-                <header className="App-header">
+            <div className="app">
+                <div className="app-main">
                     <MainPage />
-                </header>
+                </div>
             </div>
         </ChakraProvider>
     );

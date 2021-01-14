@@ -43,27 +43,26 @@ function MainPage() {
 
     return (
         <>
-            <Box spacing={8} borderRadius="lg" border="1px" borderColor="gray.600" h="15rem" w="80%" mb="10" p="6">
-                <Text color="gray.600" fontSize="xl">Welcome</Text>
-                <Text align="left" color="gray.600" fontSize="lg">As an user you would be able to enter a url and
+            <Box spacing={8} borderRadius="lg" border="1px" borderColor="gray.600" w="80%" mb="10" mt="10" p="6">
+                <Text mb="5" color="gray.600" fontSize="xl">Welcome</Text>
+                <Text mb="2" align="left" color="gray.600" fontSize="lg">As an user you would be able to enter a url and
                     received
                     from the service an shortened url of maximum 6 alphanumeric characters. The shortened url can be use
                     to reach your website.</Text>
-                <Text align="left" color="gray.600" fontSize="lg">
+                <Text mb="5" align="left" color="gray.600" fontSize="lg">
                     Example: https://www.seeburger.com/de/karriere/ => http://localhost/GUKA8w/
                 </Text>
-                <Text />
-                <Text align="left" color="gray.600" fontSize="lg">
+                <Text mb="2" align="left" color="gray.600" fontSize="lg">
                     If you want you can also enter your url with a code that will be use to form the new shortened url.
                     In this case please just enter a code of maximum 6 alphanumeric characters.
                 </Text>
-                <Text align="left" color="gray.600" fontSize="lg">
+                <Text mb="5" align="left" color="gray.600" fontSize="lg">
                     For example if you want to have the following result:
                     https://www.seeburger.com/de/karriere/stellenangebote/ => http://localhost/jobs/. Please just enter
-                    "jobs" as code.
+                    "jobs" as a code.
                 </Text>
             </Box>
-            <Box spacing={8} borderRadius="lg" border="1px" borderColor="gray.600" h="22rem" w="80%" p="6"
+            <Box spacing={8} borderRadius="lg" border="1px" borderColor="gray.600" w="80%" p="6"
                  color="white">
                 <Formik
                     initialValues={{url: "", code: ""}}
@@ -119,7 +118,7 @@ function MainPage() {
                     )}
                 </Formik>
             </Box>
-            <Box spacing={8} borderRadius="lg" border="1px" borderColor="gray.600" h="15rem" w="80%" mt="10" p="6">
+            <Box spacing={8} borderRadius="lg" border="1px" borderColor="gray.600" w="80%" mb="10" mt="10" p="6">
                 <Text color="gray.600" fontSize="xl">The result</Text>
                 <Text color="gray.500" fontSize="lg">original url: {responseData.url || ''}</Text>
                 <Text color="gray.500" fontSize="lg">shortened
